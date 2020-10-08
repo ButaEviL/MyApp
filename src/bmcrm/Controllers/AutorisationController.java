@@ -35,6 +35,16 @@ public class AutorisationController {
     @FXML
     void initialize() {
 
+        authSignInButton.setOnAction(actionEvent -> {
+            String loginText = login_Field.getText().trim();
+            String loginPassword = password_Field.getText().trim();
+
+            if(!loginText.equals("") && (!loginPassword.equals(""))) {
+                loginUser(loginText, loginPassword);
+            } else
+                System.out.println("Логин и пароль пусты");
+        });
+
         loginSignUpButton.setOnAction(actionEvent -> {
             loginSignUpButton.getScene().getWindow().hide();
 
@@ -56,5 +66,8 @@ public class AutorisationController {
 
 
 
+    }
+
+    private void loginUser(String loginText, String loginPassword) {
     }
 }

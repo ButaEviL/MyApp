@@ -1,4 +1,4 @@
-package bmcrm;
+package bmcrm.Controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -8,7 +8,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
-public class Controller {
+public class AutorisationController {
 
     @FXML
     private ResourceBundle resources;
@@ -31,6 +31,22 @@ public class Controller {
     @FXML
     void initialize() {
 
+        enterButton.setOnAction(actionEvent -> {
+            String loginText = loginField.getText().trim();
+            String loginPassword = passwordField.getText().trim();
+
+            if (!loginText.equals("") && !loginPassword.equals("")) {
+                loginUser (loginText, loginPassword);
+            } else
+                System.out.println("Error login empty");
+
+        });
+
+
 
     }
+
+    private void loginUser(String loginText, String loginPassword) {
+
+            }
 }

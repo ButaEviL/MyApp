@@ -10,8 +10,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("avtorisation.fxml"));
-        primaryStage.setTitle("Окно авторизации программы");
+        Parent root = FXMLLoader.load(getClass().getResource("view/avtorisation.fxml"));
+        primaryStage.setTitle("Окно авторизации");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.setResizable(false);
         primaryStage.show();

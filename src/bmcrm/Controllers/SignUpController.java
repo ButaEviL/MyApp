@@ -2,6 +2,8 @@ package bmcrm.Controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import bmcrm.DatabaaseHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -23,7 +25,7 @@ public class SignUpController {
     private PasswordField password_Field;
 
     @FXML
-    private Button authSignUpButton;
+    private Button signUpButton;
 
     @FXML
     private TextField signUpName;
@@ -44,6 +46,13 @@ public class SignUpController {
     void initialize() {
 
 
+
+        signUpButton.setOnAction(actionEvent -> {
+
+            DatabaaseHandler dbHandler = new DatabaaseHandler();
+            dbHandler.signUpUser(signUpName.getText(), signUpLastName.getText(), login_Field.getText(), password_Field.getText(), signUpCountry.getText(), "Male" );
+
+        });
 
     }
 }

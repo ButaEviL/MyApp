@@ -34,7 +34,7 @@
                 <Font name="Montserrat Regular" size="14.0" />
             </font>
         </PasswordField>
-        <Button fx:id="authSignUpButton" layoutX="276.0" layoutY="328.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="148.0" style="-fx-border-radius: 20;" text="Зарегистрироваться" />
+        <Button fx:id="signUpButton" layoutX="276.0" layoutY="328.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="148.0" style="-fx-border-radius: 20;" text="Зарегистрироваться" />
       <TextField fx:id="signUpName" layoutX="77.0" layoutY="127.0" prefHeight="37.0" prefWidth="243.0" promptText="Имя" style="-fx-border-color: silver; -fx-border-radius: 5px;">
          <font>
             <Font size="14.0" />
